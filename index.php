@@ -20,6 +20,10 @@
                 <form action="" method="get">
                     <input type="text" name="subject" id="subject">
                     <input type="submit">
+                    <?php
+                    echo $_POST['subject'];
+                    echo dechex($_POST['subject']);
+                    ?>
                 </form>
             </th>
             <th> convert to</th>
