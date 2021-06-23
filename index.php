@@ -7,5 +7,33 @@
 </head>
 <body>
     hello my name is doan
+
+
+    making table 
+
+
+
+    <table>
+        <tr>
+            <th> Danh Doan</th>
+            <th>
+                <form action="" method="get">
+                    <input type="text" name="subject" id="subject">
+                    <input type="submit">
+                </form>
+            </th>
+            <th> convert to</th>
+            
+        </tr>
+        <tr>
+            <td><?php
+                echo $_POST['subject'];
+            ?></td>
+            <td>hex</td>
+            <td>dec</td>
+            <td>oct</td>
+            <td>BIN</td>
+        </tr>
+    </table>
 </body>
 </html>
