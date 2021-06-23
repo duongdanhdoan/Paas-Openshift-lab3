@@ -1,69 +1,60 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title> Online Calculator </title>
+    
+    <title>Document</title>
 </head>
 <body>
-<form action = "" method = "post">
-Enter a number: <input type = "text" name = "inputNumber"/>
-<input type = "submit" name = "submitButton"/>
-</form>
-<? function hex($n)
-{
-$char_map = array(0 =>"0",1 =>"1",2 =>"2",3 =>"3",4 =>"4",5
-=>"5",6 =>"6",7 =>"7",8 =>"8",9 =>"9",10 =>"A",11 =>"B",12
-=>"C",13 =>"D",14 =>"E",15 =>"F");
-$result = array();
-for($i = 0; $n > 0; $i++)
-{
-$result[$i] = $char_map[$n % 16];
-$n = intval($n / 16);
-}
-echo "\n- Hex: ";
-for($i=$i-1; $i >= 0; $i--)
-{
-echo "$result[$i]";
-}
-}
-function bin($n)
-{
-$result = array();
-for($i = 0; $n > 0; $i++)
-{
-$result[$i] = $n % 2;
-$n = intval($n / 2);
-}
-echo "- Bin: ";
-for($i=$i-1; $i >= 0; $i--)
-{
-echo "$result[$i]";
-}
-}
-function oct($n)
-{
-$result = array();
-for($i = 0; $n > 0; $i++)
-{
-$result[$i] = $n % 8;
-$n = intval($n / 8);
-}
-echo "\n- Oct: ";
-for($i=$i-1; $i >= 0; $i--)
-{
-echo "$result[$i]";
-}
-}
-?>
-<?php
-$message = "";
-if(isset($_POST['submitButton']))
-{
-$input = $_POST['inputNumber'];
-echo "- Dec: $input";
-$hex = hex($input);
-$bin = bin($input);
-$oct = oct($input);
-}
-echo $message;
-?>
+    hello my name is doan
+
+
+    making table 
+
+
+
+    <table>
+        <tr>
+            <th> Danh Doan</th>
+            <th>
+                <form action="" method="$_POST">
+                    <input type="text" name="subject" id="subject">
+                    <input type="submit">
+                    <?php
+                    $number= $_POST['subject'];
+                    echo dechex($_POST['subject']);
+                    ?>
+                </form>
+            </th>
+            <th> convert to</th>
+            
+        </tr>
+        <tr>
+            <td><?php
+                echo $_POST['subject'];
+            ?></td>
+            <td>
+                <?php
+                echo dechex($number);
+                ?>    
+            </td>
+            <td>dec</td>
+            <td>oct</td>
+            <td>BIN</td>
+
+
+
+            <br>
+            <form action="foo.php" method="post">
+                Name:  <input type="text" name="username" /><br />
+                Email: <input type="text" name="email" /><br />
+                <input type="submit" name="submit" value="Submit me!" />
+            </form>
+            <?php
+                echo $_POST['username'];
+                echo $_REQUEST['username'];
+                ?>
+        </tr>
+    </table>
 </body>
 </html>
