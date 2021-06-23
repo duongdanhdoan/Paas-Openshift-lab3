@@ -21,7 +21,7 @@
                     <input type="text" name="subject" id="subject">
                     <input type="submit">
                     <?php
-                    echo $_POST['subject'];
+                    $number= $_POST['subject'];
                     echo dechex($_POST['subject']);
                     ?>
                 </form>
@@ -33,9 +33,9 @@
             <td><?php
                 echo $_POST['subject'];
             ?></td>
-            <td>hex
+            <td>
                 <?php
-                echo dechex($_POST['subject']);
+                echo dechex($number);
                 ?>    
             </td>
             <td>dec</td>
