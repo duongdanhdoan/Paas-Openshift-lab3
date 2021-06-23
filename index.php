@@ -29,7 +29,11 @@
             <td><?php
                 echo $_POST['subject'];
             ?></td>
-            <td>hex</td>
+            <td>hex
+                <?php
+                echo dechex($_POST['subject']);
+                ?>    
+            </td>
             <td>dec</td>
             <td>oct</td>
             <td>BIN</td>
